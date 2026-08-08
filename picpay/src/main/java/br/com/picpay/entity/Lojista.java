@@ -1,5 +1,5 @@
 package br.com.picpay.entity;
 
-public class PicpayLojista {
+public class Lojista {
     
 }
