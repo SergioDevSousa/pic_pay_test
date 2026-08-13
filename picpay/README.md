@@ -641,7 +641,7 @@ Durante o desenvolvimento foi utilizado o **H2 Database**, permitindo executar e
 Exemplo de configuração:
 
 ```properties
-spring.datasource.url=jdbc:h2:mem:picpay
+spring.datasource.url=jdbc:h2:mem:picpaydb
 spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
@@ -651,7 +651,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.h2.console.enabled=true
 ```
 
-> Quando configurado com `jdbc:h2:mem`, os dados permanecem apenas enquanto a aplicação estiver em execução.
+> Quando configurado com `jdbc:h2:mem:picpaydb`, os dados permanecem apenas enquanto a aplicação estiver em execução.
 
 ---
 
@@ -837,39 +837,6 @@ O fluxo financeiro utiliza transação de banco para preservar a consistência d
 
 A transferência deve obedecer ao princípio:
 
-```text
-Tudo funciona
-      OU
-Nada é persistido
-```
-
----
-
-# Possíveis evoluções
-
-Por se tratar de uma implementação simplificada, algumas melhorias poderiam ser aplicadas em uma versão destinada à produção:
-
-* PostgreSQL;
-* Flyway para versionamento do banco;
-* autenticação com Spring Security e JWT;
-* testes unitários;
-* testes de integração;
-* Testcontainers;
-* documentação OpenAPI/Swagger;
-* Docker;
-* retry para serviços externos;
-* circuit breaker;
-* Resilience4j;
-* processamento assíncrono de notificações;
-* RabbitMQ ou Kafka;
-* Transactional Outbox;
-* observabilidade e métricas;
-* logs estruturados;
-* idempotência das transferências;
-* locking para operações concorrentes;
-* tratamento avançado de concorrência sobre saldo.
-
----
 
 # Considerações técnicas
 
@@ -883,6 +850,12 @@ O ponto central da solução é garantir que uma transferência somente seja efe
 
 ## Autor
 
-**Sergio Sousa**
+**ALUNOS**
 
-Projeto desenvolvido como desafio técnico de backend utilizando Java e Spring Boot.
+**Sergio Sousa**
+**José Marcos**
+
+**PROFESSOR**
+**Carlos Barbosa**
+
+Projeto desenvolvido na aula designer de arquitetura do curso MBA fullstack pela UNIESP. desafio técnico de backend utilizando Java e Spring Boot.
