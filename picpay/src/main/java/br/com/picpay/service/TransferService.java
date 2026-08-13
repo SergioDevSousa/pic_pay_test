@@ -20,7 +20,7 @@ public class TransferService {
     private final NotificationService notificationService;
 
     public TransferService(UserRepository userRepository, TransactionRepository transactionRepository,
-                           AuthorizationService authorizationService, NotificationService notificationService) {
+                        AuthorizationService authorizationService, NotificationService notificationService) {
         this.userRepository = userRepository;
         this.transactionRepository = transactionRepository;
         this.authorizationService = authorizationService;
